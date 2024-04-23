@@ -10,3 +10,7 @@ Antrean pesan memungkinkan aplikasi untuk mengirim pesan ke satu sisi antrean da
 
 guest:guest: Ini adalah pasangan nama pengguna dan kata sandi yang digunakan untuk autentikasi saat terhubung ke server RabbitMQ. Dalam kasus ini, nama pengguna dan kata sandi keduanya adalah "guest". Namun, ini bukanlah praktik keamanan yang baik untuk digunakan di lingkungan produksi. Biasanya, Anda akan menggunakan kredensial yang aman untuk mengakses server RabbitMQ.
 localhost:5672: Ini adalah alamat server RabbitMQ yang ingin Anda hubungi. localhost mengacu pada komputer lokal tempat kode dijalankan. Port 5672 adalah port default yang digunakan oleh RabbitMQ untuk menerima koneksi. Jadi, secara keseluruhan, ini berarti koneksi akan dilakukan ke server RabbitMQ yang berjalan di komputer lokal pada port 5672.
+
+# Simulation slow subscriber
+![Alt text](image/ss1.jpg)
+Queued messages pada message broker akan bertambah karena adanya delay yang diberikan, sehingga publisher lebih cepat mengirim dibandingkan subscriber yang menerima. Pada kasus saya, banyaknya queued messages pada message broker adalah 20 untuk 6 kali melakukan run Publisher.
